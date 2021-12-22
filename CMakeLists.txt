@@ -14,7 +14,7 @@ endif()
 
 
 if (NOT EVOLUTION_DIR)
-    set(EVOLUTION_DIR /media/synthase/baby/babycoin/)
+    set(EVOLUTION_DIR ~/babycoin_2)
 endif()
 
 message(STATUS EVOLUTION_DIR ": ${EVOLUTION_DIR}")
@@ -23,7 +23,7 @@ set(EVOLUTION_SOURCE_DIR ${EVOLUTION_DIR}
         CACHE PATH "Path to the root directory for Babycoin")
 
 # set location of evolution build tree
-set(EVOLUTION_BUILD_DIR ${EVOLUTION_SOURCE_DIR}
+set(EVOLUTION_BUILD_DIR ${EVOLUTION_SOURCE_DIR}/build
         CACHE PATH "Path to the build directory for Babycoin")
 
 set(MY_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}/cmake"
