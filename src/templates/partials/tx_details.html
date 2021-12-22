@@ -154,7 +154,7 @@
     <div class="table-container">
       
       <div class="table-subheader">
-        {{outputs_no}} output(s) for total of {{outputs_xmr_sum}} EVOX
+        {{outputs_no}} output(s) for total of {{outputs_xmr_sum}} BABY
       </div>
 
       <table class="pure-table pure-table-striped">
@@ -189,7 +189,7 @@
           <label for="tab-1">Decode outputs</label>
           <div class="content">
             <p style="margin: 0px">
-              Check which outputs belong to given EVOX address/subaddress and viewkey<br/>
+              Check which outputs belong to given BABY address/subaddress and viewkey<br/>
               {{#enable_js}}
               Note: address/subaddress and viewkey are NOT sent to the server, as the calculations are done on the client side
               {{/enable_js}}
@@ -199,7 +199,7 @@
             </p>
             <form action="/myoutputs" method="post" class="pure-form">
               <input type="hidden" name="tx_hash" value="{{tx_hash}}"/>
-              <input type="text" name="xmr_address" placeholder="EVOX address/subaddress" class="pure-input-1" />
+              <input type="text" name="xmr_address" placeholder="BABY address/subaddress" class="pure-input-1" />
               <input type="text" name="viewkey" placeholder="Private viewkey" class="pure-input-1" />
               <input type="hidden" name="raw_tx_data" value="{{raw_tx_data}}" />
               <!--above raw_tx_data field only used when checking raw tx data through tx pusher-->
@@ -222,8 +222,8 @@
 
           <div class="content">
             <p style="margin: 0px">
-              Prove to someone that you have sent them EVOX in this transaction<br/>
-              Tx private key can be obtained using <code>get_tx_key</code> command in <code>EVOX-wallet-cli</code><br/>
+              Prove to someone that you have sent them BABY in this transaction<br/>
+              Tx private key can be obtained using <code>get_tx_key</code> command in <code>BABY-wallet-cli</code><br/>
               {{#enable_js}}
               Note: address/subaddress and tx private key are NOT sent to the server, as the calculations are done on the client side
               {{/enable_js}}
@@ -236,7 +236,7 @@
               <input type="text" name="txprvkey" placeholder="Tx private key" class="pure-input-1" />
               <input type="hidden" name="raw_tx_data" value="{{raw_tx_data}}" />
               <!--above raw_tx_data field only used when checking raw tx data through tx pusher-->
-              <input type="text" name="xmraddress" placeholder="Recipient's EVOX address/subaddress" class="pure-input-1" />
+              <input type="text" name="xmraddress" placeholder="Recipient's BABY address/subaddress" class="pure-input-1" />
 
               {{#enable_js}}
               <!-- if have js, DONOT submit the form to server.
@@ -459,7 +459,7 @@ function decodeOutputs(tx_json, pub_key, sec_key,
 
     decoding_results_str += "</table>";
 
-    decoding_results_str += "<h3>Sum EVOX from matched outputs (i.e., incoming EVOX): " + (sum_outptus / 1e9) + "</h3>"
+    decoding_results_str += "<h3>Sum BABY from matched outputs (i.e., incoming BABY): " + (sum_outptus / 1e9) + "</h3>"
 
 
     // decrypt payment_id8 which results in using
@@ -507,14 +507,14 @@ function decodeOutputs(tx_json, pub_key, sec_key,
 
   <div class="table-header">
   {{^inputs_xmr_sum_not_zero}}
-  {{inputs_no}} input(s) for total of {{inputs_xmr_sum}} EVOX
+  {{inputs_no}} input(s) for total of {{inputs_xmr_sum}} BABY
   {{/inputs_xmr_sum_not_zero}}
   {{#inputs_xmr_sum_not_zero}}
   {{^have_any_unknown_amount}}
-  {{inputs_no}} inputs(s) for total of {{inputs_xmr_sum}} EVOX
+  {{inputs_no}} inputs(s) for total of {{inputs_xmr_sum}} BABY
   {{/have_any_unknown_amount}}
   {{#have_any_unknown_amount}}
-  {{inputs_no}} inputs(s) for total of at least {{inputs_xmr_sum}} EVOX
+  {{inputs_no}} inputs(s) for total of at least {{inputs_xmr_sum}} BABY
   {{/have_any_unknown_amount}}
   {{/inputs_xmr_sum_not_zero}}
   </div>

@@ -2,8 +2,8 @@
 // Created by mwo on 28/05/17.
 //
 
-#ifndef EVOXBLOCKS_MEMPOOLSTATUS_H
-#define EVOXBLOCKS_MEMPOOLSTATUS_H
+#ifndef BABYBLOCKS_MEMPOOLSTATUS_H
+#define BABYBLOCKS_MEMPOOLSTATUS_H
 
 
 #include "MicroCore.h"
@@ -164,4 +164,4 @@ struct MempoolStatus
 };
 
 }
-#endif //EVOXBLOCKS_MEMPOOLSTATUS_H
+#endif //BABYBLOCKS_MEMPOOLSTATUS_H

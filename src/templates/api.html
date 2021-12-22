@@ -228,7 +228,7 @@
   For this, we use recipient's address and our tx private key as a viewkey value,
   i.e., <code>viewkey=&lt;tx_private_key&gt;</code></p>
 <p>Checking outputs:</p>
-<pre><code class="language-bash"><span class="hljs-comment"># we use here official EVOX project's donation address as an example</span>
+<pre><code class="language-bash"><span class="hljs-comment"># we use here official BABY project's donation address as an example</span>
     curl  -w <span class="hljs-string">"\n"</span> -X GET <span class="hljs-string">"https://explorer.babycoinproject.space/api/outputs?txhash=17049bc5f2d9fbca1ce8dae443bbbbed2fc02f1ee003ffdd0571996905faa831&amp;address=RYoLshW4LVn8TurtCrZzAd79FURtPHb93ATRYch3JpSDgvPRubk1VeEKg33sVifjASf7NzZtgQ6urVAAAKDKDtmUiDraNbdDvyk&amp;viewkey=f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501&amp;txprove=0"</span>
 </code></pre>
 <pre><code class="language-json">{
@@ -256,7 +256,7 @@
     </span>}
 </code></pre>
 <p>Proving transfer:</p>
-<p>We use recipient's address (i.e. not our address from which we sent EVOX to recipient).
+<p>We use recipient's address (i.e. not our address from which we sent BABY to recipient).
   For the viewkey, we use <code>tx_private_key</code> (although the GET variable is still called <code>viewkey</code>) that we obtained by sending this txs.</p>
 <pre><code class="language-bash">curl  -w <span class="hljs-string">"\n"</span> -X GET <span class="hljs-string">"https://explorer.babycoinproject.space/api/outputs?txhash=94782a8c0aa8d8768afa0c040ef0544b63eb5148ca971a024ac402cad313d3b3&amp;address=RYoLshW4LVn8TurtCrZzAd79FURtPHb93ATRYch3JpSDgvPRubk1VeEKg33sVifjASf7NzZtgQ6urVAAAKDKDtmUiDraNbdDvyk&amp;viewkey=e94b5bfc599d2f741d6f07e3ab2a83f915e96fb374dfb2cd3dbe730e34ecb40b&amp;txprove=1"</span>
 </code></pre>
@@ -403,13 +403,13 @@
 <hr>
 <h4>api/rawblock/&lt;block_number&gt;</h4>
 <h4>api/rawblock/&lt;block_hash&gt;</h4>
-<p>Return raw json block data, as represented in EVOX.</p>
+<p>Return raw json block data, as represented in BABY.</p>
 <pre><code class="language-bash">curl  -w <span class="hljs-string">"\n"</span> -X GET <span class="hljs-string">"https://explorer.babycoinproject.space/api/rawblock/150000"</span>
 </code></pre>
 <p>Example result not shown.</p>
 <hr>
 <h4>api/rawtransaction/&lt;tx_hash&gt;</h4>
-<p>Return raw json tx data, as represented in EVOX.</p>
+<p>Return raw json tx data, as represented in BABY.</p>
 <pre><code class="language-bash">curl  -w <span class="hljs-string">"\n"</span> -X GET <span class="hljs-string">"https://explorer.babycoinproject.space/api/rawtransaction/4307e5619b29dcc1d9cdf4a52b3d0717bcbab0efc06d88fb79a1e0e33594e6ec"</span>
 </code></pre>
 <p>Example result not shown.</p>

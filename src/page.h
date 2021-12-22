@@ -347,7 +347,7 @@ struct tx_details
         string fee_nano_str {"N/A"};
         string payed_for_kB_nano_str {"N/A"};
 
-        const double& evox_amount = EVOX_AMOUNT(fee);
+        const double& evox_amount = BABY_AMOUNT(fee);
 
         // tx size in kB
         double tx_size =  static_cast<double>(size)/1024.0;
@@ -6467,7 +6467,7 @@ construct_tx_context(transaction tx, uint16_t with_ring_signatures = 0)
 
     double tx_size = static_cast<double>(txd.size) / 1024.0;
 
-    double payed_for_kB = EVOX_AMOUNT(txd.fee) / tx_size;
+    double payed_for_kB = BABY_AMOUNT(txd.fee) / tx_size;
 
     // initalise page tempate map with basic info about blockchain
     mstch::map context {

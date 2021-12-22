@@ -175,7 +175,7 @@ MempoolStatus::read_mempool()
 
         double tx_size = static_cast<double>(_tx_info.blob_size)/1024.0;
 
-        double payed_for_kB = EVOX_AMOUNT(_tx_info.fee) / tx_size;
+        double payed_for_kB = BABY_AMOUNT(_tx_info.fee) / tx_size;
 
         last_tx.receive_time = _tx_info.receive_time;
 

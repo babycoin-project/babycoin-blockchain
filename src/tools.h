@@ -7,7 +7,7 @@
 
 #define PATH_SEPARARTOR '/'
 
-#define EVOX_AMOUNT(value) \
+#define BABY_AMOUNT(value) \
     static_cast<double>(value) / 1e9
 
 #define REMOVE_HASH_BRAKETS(a_hash) \
@@ -278,13 +278,13 @@ static string evox_amount_to_str(const uint64_t &evox_amount,
 
     if (!zero_to_question_mark)
     {
-        amount_str = fmt::format(_format, EVOX_AMOUNT(evox_amount));
+        amount_str = fmt::format(_format, BABY_AMOUNT(evox_amount));
     }
     else
     {
         if (evox_amount > 0 && zero_to_question_mark == true)
         {
-            amount_str = fmt::format(_format, EVOX_AMOUNT(evox_amount));
+            amount_str = fmt::format(_format, BABY_AMOUNT(evox_amount));
         }
     }
 
