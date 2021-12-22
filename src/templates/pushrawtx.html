@@ -1,0 +1,29 @@
+<div>
+
+  <div class="table-header">
+    Push Transaction
+  </div>
+  
+  <div class="table-scroller padding">
+    
+    {{#txs}}
+    <p>Attempting to push tx: <span class="line-break">{{tx_hash}}</span></p>
+    {{/txs}}
+
+    {{#has_error}}
+    <p style="color:red">Attempt failed</p>
+    <p>{{{error_msg}}}</p>
+    {{/has_error}}
+    
+    {{^has_error}}
+    <p style="color:green">Success</p>
+    <p>Your tx should be already in the mempool waiting to be included
+      in an upcoming block.</p>
+    {{#txs}}
+    <p><a class="pure-button pure-button-active" href="/tx/{{tx_hash}}">View transaction</a></p>
+    {{/txs}}
+    {{/has_error}}
+
+  </div>
+  
+</div>

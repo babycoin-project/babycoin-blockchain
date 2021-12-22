@@ -1,0 +1,53 @@
+<div>
+
+  <div class="table-header">
+    Signed Key Images Checker
+  </div>
+
+  <div class="table-scroller padding">
+    <form action="/checkrawkeyimgs" method="post" class="pure-form">
+
+      <p>
+        <textarea placeholder="Base64 encoded signed key images data" name="rawkeyimgsdata"></textarea>
+      </p>
+
+      <p>
+        <input type="text" placeholder="Private viewkey" name="viewkey" class="pure-input-1" />
+      </p>
+
+      <div class="buttons-container">
+        <input type="submit" name="action" value="check" class="pure-button pure-button-active" />
+      </div>
+      
+    </form>
+  </div>
+
+  <div class="table-header">
+    Instructions
+  </div>
+
+  <div class="table-scroller padding">
+    <h4>Obtaining signed keys images</h4>
+    <ul>
+      <li>
+        From <code>evox-wallet-cli</code> type <code>export_key_images key_images</code>
+      </li>
+      <li>
+        On Linux terminal, type <code>base64 key_images | xclip -selection clipboard</code>
+      </li>
+      <li>
+        On Windows command line, type <code>certutil.exe -encode -f keys_images encoded.txt & type "encoded.txt" | clip</code>
+      </li>
+    </ul>
+
+    <h4>Notes</h4>
+    <ul>
+      <li>
+        Key image data is encrypted using your viewkey.
+        Data and viewkey are sent to the server.
+      </li>
+    </ul>
+
+  </div>
+
+</div>

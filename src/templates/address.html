@@ -1,0 +1,91 @@
+<div>
+
+  <div class="table-header">
+    Address Details
+  </div>
+  <div class="table-scroller">
+    <div class="monospace pure-g">
+
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Address</span>
+      </div>
+      <div class="pure-u-3-4 pure-u-md-4-5 line-break">
+        <span>{{xmr_address}}</span>
+      </div>
+
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Address type</span>
+      </div>
+      <div class="pure-u-3-4 pure-u-md-4-5">
+        {{#is_kurz_addr}}
+        <span>Kurz</span>
+        {{/is_kurz_addr}}
+        {{#is_integrated_addr}}
+        <span>Integrated</span>
+        {{/is_integrated_addr}}
+        {{^is_kurz_addr}}{{^is_integrated_addr}}
+        <span>Long</span>
+        {{/is_integrated_addr}}{{/is_kurz_addr}}
+      </div>
+
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Network type</span>
+      </div>
+      {{#testnet}}
+      <div class="pure-u-3-4 pure-u-md-4-5">
+        <span>Testnet</span>
+      </div>
+      {{/testnet}}
+      {{#stagenet}}
+      <div class="pure-u-3-4 pure-u-md-4-5">
+        <span>Stagenet</span>
+      </div>
+      {{/stagenet}}
+      {{^testnet}}{{^stagenet}}
+      <div class="pure-u-3-4 pure-u-md-4-5">
+        <span>Mainnet</span>
+      </div>
+      {{/stagenet}}{{/testnet}}
+
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Public spendkey</span>
+      </div>
+      <div class="pure-u-3-4 pure-u-md-4-5 line-break">
+        <span>{{public_spendkey}}</span>
+      </div>
+
+      {{^is_kurz_addr}}
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Public viewkey</span>
+      </div>
+      <div class="pure-u-3-4 pure-u-md-4-5 line-break">
+        <span>{{public_viewkey}}</span>
+      </div>
+      {{/is_kurz_addr}}
+
+      {{#is_integrated_addr}}
+      <div class="pure-u-1-4 pure-u-md-1-5">
+        <span>Payment id</span>
+      </div>
+      <div class="pure-u-3-4 pure-u-md-4-5 line-break">
+        <span>{{encrypted_payment_id}}</span>
+      </div>
+      {{/is_integrated_addr}}
+
+    </div>
+  </div>
+
+  <div class="table-header">
+    Transactions
+  </div>
+  <div class="table-scroller">
+    <div class="monospace pure-g">
+      <div class="pure-u-1">
+        EVOLUTION is a private by default coin and it is not possible to find
+        transactions associated with this address.
+      </div>
+    </div>
+  </div>
+
+</div>
+
