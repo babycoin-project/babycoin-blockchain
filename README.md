@@ -83,7 +83,7 @@ cd ~
 git clone https://github.com/babycoin-project/evox-blockchain.git
 
 # enter the downloaded sourced code folder
-cd evox-blockchain
+cd babycoinvox-blockchain
 
 # make a build folder and enter it
 mkdir build && cd build
@@ -104,7 +104,7 @@ make
 
 To run it:
 ```
-./evoxblocks
+./babyblocks
 ```
 
 By default it will look for blockchain in its default location i.e., `~/.babycoin/lmdb`.
@@ -113,13 +113,13 @@ You can use `-b` option if its in different location.
 For example:
 
 ```bash
-./evoxblocks -b /home/babycoin/non-defult-babycoin-location/lmdb/
+./babyblocks -b /home/babycoin/non-defult-babycoin-location/lmdb/
 ```
 
 Example output:
 
 ```bash
-[babycoin@us blockchain-explorer]$ ./evoxblocks
+[babycoin@us blockchain-explorer]$ ./babyblocks
 2016-May-28 10:04:49.160280 Blockchain initialized. last block: 1056761, d0.h0.m12.s47 time ago, current difficulty: 1517857750
 (2016-05-28 02:04:49) [INFO    ] Crow/0.1 server is running, local port 8081
 ```
