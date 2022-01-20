@@ -80,10 +80,10 @@ as follows:
 cd ~
 
 # download the source code
-git clone https://github.com/babycoin-project/evox-blockchain.git
+git clone https://github.com/babycoin-project/babycoin-blockchain.git
 
 # enter the downloaded sourced code folder
-cd babycoinvox-blockchain
+cd babycoin-blockchain
 
 # make a build folder and enter it
 mkdir build && cd build
@@ -129,7 +129,7 @@ Go to your browser: http://127.0.0.1:8081
 ## The explorer's command line options
 
 ```
-evoxblocks, Babycoin Onion Blockchain Explorer:
+babyblocks, Babycoin Onion Blockchain Explorer:
   -h [ --help ] [=arg(=1)] (=0)         produce help message
   -t [ --testnet ] [=arg(=1)] (=0)      use testnet blockchain
   -s [ --stagenet ] [=arg(=1)] (=0)     use stagenet blockchain
@@ -185,10 +185,8 @@ Example usage, defined as bash aliases.
 
 ```bash
 # for mainnet explorer
-alias evoxblocksmainnet='~/blockchain-explorer/build/evoxblocks    --port 8081 --testnet-url "http://139.162.32.245:8082" --enable-pusher --enable-emission-monitor'
+alias babyblocksmainnet='~/blockchain-explorer/build/babyblocks    --port 8081 --testnet-url "http://139.162.32.245:8082" --enable-pusher --enable-emission-monitor'
 
-# for testnet explorer
-alias evoxblockstestnet='~/blockchain-explorer/build/evoxblocks -t --port 8082 --mainnet-url "http://139.162.32.245:8081" --enable-pusher --enable-emission-monitor'
 ```
 
 These are aliases similar to those used for http://explorer.babycoinproject.space/ .
